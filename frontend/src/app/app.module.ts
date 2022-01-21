@@ -15,9 +15,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { CarCrudComponent } from './views/car-crud/car-crud.component';
+import { RedDirective } from './directives/red.directive';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,4 +31,4 @@ import { CarCrudComponent } from './views/car-crud/car-crud.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
