@@ -16,9 +16,10 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { CarCrudComponent } from './views/car-crud/car-crud.component';
 import { RedDirective } from './directives/red.directive';
+import { ForDirective } from './directives/for.directive';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
