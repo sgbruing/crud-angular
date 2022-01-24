@@ -1,3 +1,4 @@
+import { CarCreateComponent } from './components/car/car-create/car-create.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,7 +11,12 @@ const routes: Routes = [{
 }, {
   path: "cars",
   component: CarCrudComponent
-}];
+},
+{
+  path: "car/create",
+  component: CarCreateComponent 
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
