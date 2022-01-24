@@ -17,9 +17,10 @@ import { HomeComponent } from './views/home/home.component';
 import { CarCrudComponent } from './views/car-crud/car-crud.component';
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
+import { CarCreateComponent } from './components/car/car-create/car-create.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
