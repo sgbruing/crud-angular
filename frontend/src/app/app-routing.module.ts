@@ -14,7 +14,7 @@ const routes: Routes = [{
 },
 {
   path: "car/create",
-  component: CarCreateComponent 
+  component: CarCreateComponent
 }
 ];
 
