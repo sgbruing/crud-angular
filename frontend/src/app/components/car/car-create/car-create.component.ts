@@ -1,3 +1,4 @@
+import { CarService } from './../car.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,15 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarCreateComponent implements OnInit {
 
-  propLegal = "qualquer"
-
-  constructor() { }
+  constructor(private CarService: CarService) { }
 
   ngOnInit(): void {
   }
 
-  fazerAlgo(): void {
-    console.log('Fazendo algo')
-  } 
+  createCar(): void {
+    this.CarService.showMessage('Operação Executada com Sucesso!')
+  }
 
 }
