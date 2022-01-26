@@ -19,6 +19,7 @@ import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 import { CarCreateComponent } from './components/car/car-create/car-create.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent],
@@ -30,7 +31,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
