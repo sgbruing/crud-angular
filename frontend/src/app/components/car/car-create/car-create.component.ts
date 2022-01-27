@@ -1,3 +1,4 @@
+import { Car } from './../car.model';
 import { CarService } from './../car.service';
 import { Component, OnInit } from '@angular/core';
 import {Router } from '@angular/router';
@@ -9,6 +10,16 @@ import {Router } from '@angular/router';
 })
 export class CarCreateComponent implements OnInit {
 
+  car: Car = {
+    name: "Chevrolet Celta",
+    year: 2004,
+    color: "Azul Santorini",
+    Horsepower: 77,
+    cylinders: 4,
+    displacements: 1.0,
+    price: 13.0
+  }
+
   constructor(private CarService: CarService,
     private router: Router) { }
 
@@ -16,7 +27,10 @@ export class CarCreateComponent implements OnInit {
   }
 
   createCar(): void {
-    this.CarService.showMessage('Carro adicionado com sucesso!!')
+    this.CarService.create(this.car).subscribe(() => {
+      this.CarService.showMessage('Carro adicionado com sucesso!!')
+      this.router.navigate(['/cars'])
+    })
   }
 
   cancel(): void {
