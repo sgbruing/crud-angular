@@ -21,6 +21,8 @@ import { CarCreateComponent } from './components/car/car-create/car-create.compo
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent],
   imports: [
@@ -32,7 +34,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
