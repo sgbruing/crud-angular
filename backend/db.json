@@ -7,8 +7,8 @@
       "color": "Azul Santorini",
       "Horsepower": 77,
       "cylinders": 4,
-      "displacements": 1.0,
-      "price": 13.0
+      "displacements": 1,
+      "price": 13
     },
     {
       "id": 2,
@@ -17,8 +17,8 @@
       "color": "Branco",
       "Horsepower": 76,
       "cylinders": 4,
-      "displacements": 1.0,
-      "price": 28.0
+      "displacements": 1,
+      "price": 28
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
       "Horsepower": 97,
       "cylinders": 4,
       "displacements": 1.6,
-      "price": 19.0
+      "price": 19
     },
     {
       "id": 5,
@@ -47,7 +47,17 @@
       "color": "Red",
       "Horsepower": 152,
       "cylinders": 4,
-      "price": 45.0
+      "price": 45
+    },
+    {
+      "name": "Chevrolet Celta",
+      "year": 2004,
+      "color": "Azul Santorini",
+      "Horsepower": 77,
+      "cylinders": 4,
+      "displacements": 1,
+      "price": 13,
+      "id": 6
     }
   ]
 }
