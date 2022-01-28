@@ -3,8 +3,8 @@ export interface Car {
     name: string
     year: number
     color: string
-    Horsepower: number
+    horsepower: number
     cylinders: number
-    displacements: number
+    engine_capacity: number
     price: number
 }

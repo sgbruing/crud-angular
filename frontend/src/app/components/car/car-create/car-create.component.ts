@@ -14,9 +14,9 @@ export class CarCreateComponent implements OnInit {
     name: "Chevrolet Celta",
     year: 2004,
     color: "Azul Santorini",
-    Horsepower: 77,
+    horsepower: 77,
     cylinders: 4,
-    displacements: 1.0,
+    engine_capacity: 1.0,
     price: 13.0
   }
 

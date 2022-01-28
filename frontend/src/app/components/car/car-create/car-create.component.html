@@ -2,10 +2,32 @@
     <mat-card-title>Novo Carro</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Modelo" >
+            <input matInput placeholder="Nome" 
+                [(ngModel)]="car.name" name="name" >
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço" >
+            <input matInput type="number" placeholder="Ano" 
+                [(ngModel)]="car.year" name="year" >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cor" 
+                [(ngModel)]="car.color" name="color" >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Potência" 
+                [(ngModel)]="car.horsepower" name="horsepower" >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cilindros" 
+                [(ngModel)]="car.cylinders" name="cylinders" >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cilindradas" 
+                [(ngModel)]="car.engine_capacity" name="engine_capacity" >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" 
+                [(ngModel)]="car.price" name="price" >
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="createCar()" color="primary">

@@ -5,9 +5,9 @@
       "name:": "Chevrolet Celta",
       "year:": 2004,
       "color": "Azul Santorini",
-      "Horsepower": 77,
+      "horsepower": 77,
       "cylinders": 4,
-      "displacements": 1,
+      "engine_capacity": 1,
       "price": 13
     },
     {
@@ -15,9 +15,9 @@
       "name:": "Volkswagen Fox",
       "year:": 2011,
       "color": "Branco",
-      "Horsepower": 76,
+      "horsepower": 76,
       "cylinders": 4,
-      "displacements": 1,
+      "engine_capacity": 1,
       "price": 28
     },
     {
@@ -25,9 +25,9 @@
       "name:": "Toyota Etios",
       "year:": 2018,
       "color": "White",
-      "Horsepower": 88,
+      "horsepower": 88,
       "cylinders": 4,
-      "displacements": 1.3,
+      "engine_capacity": 1.3,
       "price": 53.4
     },
     {
@@ -35,9 +35,9 @@
       "name:": "Volkswagen Gol",
       "year:": 2005,
       "color": "Preto",
-      "Horsepower": 97,
+      "horsepower": 97,
       "cylinders": 4,
-      "displacements": 1.6,
+      "engine_capacity": 1.6,
       "price": 19
     },
     {
@@ -45,19 +45,40 @@
       "name:": "Fiat Punto Tjet",
       "year:": 2010,
       "color": "Red",
-      "Horsepower": 152,
+      "horsepower": 152,
       "cylinders": 4,
+      "engine_capacity": 1.4,
       "price": 45
     },
     {
       "name": "Chevrolet Celta",
       "year": 2004,
       "color": "Azul Santorini",
-      "Horsepower": 77,
+      "horsepower": 77,
       "cylinders": 4,
-      "displacements": 1,
+      "engine_capacity": 1,
       "price": 13,
       "id": 6
+    },
+    {
+      "name": "VeioDoFront",
+      "year": 2004,
+      "color": "Azul Santorini",
+      "horsepower": 77,
+      "cylinders": 4,
+      "engine_capacity": 1,
+      "price": "9.99",
+      "id": 7
+    },
+    {
+      "name": "Golf Sapão",
+      "year": 2002,
+      "color": "Prata",
+      "horsepower": "90",
+      "cylinders": 4,
+      "engine_capacity": "1.6",
+      "price": "22.000",
+      "id": 8
     }
   ]
 }
