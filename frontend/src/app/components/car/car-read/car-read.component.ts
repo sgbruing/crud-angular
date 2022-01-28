@@ -1,3 +1,5 @@
+import { CarService } from './../car.service';
+import { Car } from './../car.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarReadComponent implements OnInit {
 
-  constructor() { }
+  cars: Car[]
+
+  constructor(private CarService: CarService) { }
 
   ngOnInit(): void {
+
+    this.CarService.read().subscribe(cars => {
+      this.cars = cars
+      console.log(cars)
+    })
+
   }
 
 }
