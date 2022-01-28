@@ -25,4 +25,8 @@ export class CarService {
     return this.http.post<Car>(this.baseUrl, car)
   }
 
+  read(): Observable<Car[]> {
+    return this.http.get<Car[]>(this.baseUrl)
+  }
+
 }
