@@ -26,9 +26,13 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CarReadComponent } from './components/car/car-read/car-read.component';
+import { CarRead2Component } from './components/car/car-read2/car-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent, CarReadComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent, CarReadComponent, CarRead2Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,7 +46,10 @@ import { CarReadComponent } from './components/car/car-read/car-read.component';
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent],
