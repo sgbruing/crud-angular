@@ -17,7 +17,6 @@ export class CarReadComponent implements OnInit {
 
     this.CarService.read().subscribe(cars => {
       this.cars = cars
-      console.log(cars)
     })
 
   }
