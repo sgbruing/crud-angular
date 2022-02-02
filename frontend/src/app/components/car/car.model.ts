@@ -1,10 +1,10 @@
 export interface Car {
     id?: number
     name: string
-    year: number
-    color: string
-    horsepower: number
-    cylinders: number
-    engine_capacity: number
-    price: number
+    year?: number
+    color?: string
+    horsepower?: number
+    cylinders?: number
+    engine_capacity?: number
+    price?: number
 }

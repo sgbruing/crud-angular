@@ -1,17 +1,11 @@
+import { Car } from './../car.model';
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
-// TODO: Replace this with your own data model type
-export interface CarRead2Item {
-  name: string;
-  id: number;
-}
-
-// TODO: replace this with real data from your application
-const EXAMPLE_DATA: CarRead2Item[] = [
+const EXAMPLE_DATA: Car[] = [
   {id: 1, name: 'Hydrogen'},
   {id: 2, name: 'Helium'},
   {id: 3, name: 'Lithium'},
@@ -39,8 +33,8 @@ const EXAMPLE_DATA: CarRead2Item[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class CarRead2DataSource extends DataSource<CarRead2Item> {
-  data: CarRead2Item[] = EXAMPLE_DATA;
+export class CarRead2DataSource extends DataSource<Car> {
+  data: Car[] = EXAMPLE_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
@@ -53,7 +47,7 @@ export class CarRead2DataSource extends DataSource<CarRead2Item> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<CarRead2Item[]> {
+  connect(): Observable<Car[]> {
     if (this.paginator && this.sort) {
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
@@ -76,7 +70,7 @@ export class CarRead2DataSource extends DataSource<CarRead2Item> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: CarRead2Item[]): CarRead2Item[] {
+  private getPagedData(data: Car[]): Car[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -89,7 +83,7 @@ export class CarRead2DataSource extends DataSource<CarRead2Item> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: CarRead2Item[]): CarRead2Item[] {
+  private getSortedData(data: Car[]): Car[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }

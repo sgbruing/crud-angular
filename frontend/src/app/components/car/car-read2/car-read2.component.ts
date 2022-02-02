@@ -1,8 +1,9 @@
+import { Car } from './../car.model';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { CarRead2DataSource, CarRead2Item } from './car-read2-datasource';
+import { CarRead2DataSource } from './car-read2-datasource';
 
 @Component({
   selector: 'app-car-read2',
@@ -12,7 +13,7 @@ import { CarRead2DataSource, CarRead2Item } from './car-read2-datasource';
 export class CarRead2Component implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<CarRead2Item>;
+  @ViewChild(MatTable) table!: MatTable<Car>;
   dataSource: CarRead2DataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
