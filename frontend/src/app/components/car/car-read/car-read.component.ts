@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CarReadComponent implements OnInit {
 
   cars: Car[]
-  displayedColumns = ['id', 'name', 'price']
+  displayedColumns = ['id', 'name', 'year', 'color', 'horsepower', 'cylinders', 'engine_capacity', 'price']
 
   constructor(private CarService: CarService) { }
 
