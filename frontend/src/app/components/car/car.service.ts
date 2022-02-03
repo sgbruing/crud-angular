@@ -34,4 +34,9 @@ export class CarService {
     return this.http.get<Car>(url)
   }
 
+  update(car: Car): Observable<Car> {
+    const url = `${this.baseUrl}/${car.id}`
+    return this.http.put<Car>(url, car)
+  }
+
 }
