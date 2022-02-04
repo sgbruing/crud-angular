@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { CarService } from './../car.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarUpdateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private carService: CarService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  updateCar(): void {
+
+  }
+
+  cancel(): void {
+    this.router.navigate(['/cars'])
   }
 
 }
