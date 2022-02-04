@@ -1,3 +1,4 @@
+import { CarUpdateComponent } from './components/car/car-update/car-update.component';
 import { CarCreateComponent } from './components/car/car-create/car-create.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -15,6 +16,10 @@ const routes: Routes = [{
 {
   path: "car/create",
   component: CarCreateComponent
+},
+{
+  path: "car/update/:id",
+  component: CarUpdateComponent
 }
 ];
 
