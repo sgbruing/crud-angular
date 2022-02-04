@@ -33,11 +33,12 @@ import { MatSortModule } from '@angular/material/sort';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { CarUpdateComponent } from './components/car/car-update/car-update.component';
 
 registerLocaleData(localePt)
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent, CarReadComponent, CarRead2Component],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent, CarReadComponent, CarRead2Component, CarUpdateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
