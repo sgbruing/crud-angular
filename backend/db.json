@@ -43,8 +43,8 @@
     {
       "name": "Fiat Punto Tjet",
       "year": 2010,
-      "color": "Red",
-      "horsepower": 152,
+      "color": "White",
+      "horsepower": "150",
       "cylinders": 4,
       "engine_capacity": 1.4,
       "price": 45,

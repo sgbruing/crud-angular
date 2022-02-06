@@ -11,13 +11,13 @@ import {Router } from '@angular/router';
 export class CarCreateComponent implements OnInit {
 
   car: Car = {
-    name: "Chevrolet Celta",
-    year: 2004,
-    color: "Azul Santorini",
-    horsepower: 77,
-    cylinders: 4,
-    engine_capacity: 1.0,
-    price: 13.0
+    name: "",
+    year: null,
+    color: "",
+    horsepower: null,
+    cylinders: null,
+    engine_capacity: null,
+    price: null
   }
 
   constructor(private CarService: CarService,
