@@ -22,7 +22,10 @@ export class CarUpdateComponent implements OnInit {
   }
 
   updateCar(): void {
-
+    this.carService.update(this.car).subscribe(() => {
+      this.carService.showMessage("Carro atualizado com sucesso!")
+      this.router.navigate(["/cars"])
+    })
   }
 
   cancel(): void {
