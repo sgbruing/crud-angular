@@ -1,1 +1,40 @@
-<p>car-delete works!</p>
+<mat-card>
+    <mat-card-title>Excluir Carro</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+                [value]="car.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="number" placeholder="Ano" 
+                [value]="car.year" name="year" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cor" 
+                [value]="car.color" name="color" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Potência" 
+                [value]="car.horsepower" name="horsepower" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cilindros" 
+                [value]="car.cylinders" name="cylinders" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cilindradas" 
+                [value]="car.engine_capacity" name="engine_capacity" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" 
+                [value]="car.price" name="price" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteCar()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" color="">
+        Cancelar
+    </button> 
+</mat-card>
