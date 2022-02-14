@@ -35,10 +35,12 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { CarUpdateComponent } from './components/car/car-update/car-update.component';
 
+import { CarDeleteComponent } from './components/car/car-delete/car-delete.component';
+
 registerLocaleData(localePt)
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent, CarReadComponent, CarRead2Component, CarUpdateComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CarCrudComponent, RedDirective, ForDirective, CarCreateComponent, CarReadComponent, CarRead2Component, CarUpdateComponent, CarDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
