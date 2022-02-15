@@ -39,7 +39,7 @@ export class CarService {
     return this.http.put<Car>(url, car)
   }
 
-  delete(id: String): Observable<Car> {
+  delete(id: Number): Observable<Car> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<Car>(url)
   }
