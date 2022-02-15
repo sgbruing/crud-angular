@@ -15,7 +15,7 @@ export class CarDeleteComponent implements OnInit {
   constructor(private carService: CarService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = +this.route.snapshot.paramMap.get('id');
     this.carService.readById(id).subscribe(car => {
       this.car = car
     })

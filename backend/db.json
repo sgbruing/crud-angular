@@ -79,16 +79,6 @@
       "engine_capacity": "1.6",
       "price": "22.000",
       "id": 8
-    },
-    {
-      "name": "Sandero",
-      "year": 2009,
-      "color": "Vermelho",
-      "horsepower": "89",
-      "cylinders": "4",
-      "engine_capacity": "1000",
-      "price": "22.000",
-      "id": 9
     }
   ]
 }

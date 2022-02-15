@@ -29,7 +29,7 @@ export class CarService {
     return this.http.get<Car[]>(this.baseUrl)
   }
 
-  readById(id: string): Observable<Car> {
+  readById(id: Number): Observable<Car> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Car>(url)
   }

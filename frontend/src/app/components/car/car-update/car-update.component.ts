@@ -15,7 +15,7 @@ export class CarUpdateComponent implements OnInit {
   constructor(private carService: CarService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
+    const id = +this.route.snapshot.paramMap.get('id')
     this.carService.readById(id).subscribe(car => {
       this.car = car
     })
@@ -23,13 +23,13 @@ export class CarUpdateComponent implements OnInit {
 
   updateCar(): void {
     this.carService.update(this.car).subscribe(() => {
-      this.carService.showMessage("Carro atualizado com sucesso!")
-      this.router.navigate(["/cars"])
+      this.carService.showMessage("Carro atualizado com sucesso!");
+      this.router.navigate(["/cars"]);
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/cars'])
+    this.router.navigate(['/cars']);
   }
 
 }
