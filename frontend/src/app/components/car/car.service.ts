@@ -36,22 +36,36 @@ export class CarService {
   }
 
   read(): Observable<Car[]> {
-    return this.http.get<Car[]>(this.baseUrl)
+    return this.http.get<Car[]>(this.baseUrl).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
   }
 
   readById(id: Number): Observable<Car> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<Car>(url)
+    return this.http.get<Car>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
   }
 
   update(car: Car): Observable<Car> {
     const url = `${this.baseUrl}/${car.id}`
-    return this.http.put<Car>(url, car)
+    return this.http.put<Car>(url, car).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
   }
 
   delete(id: Number): Observable<Car> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Car>(url)
+    return this.http.delete<Car>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
   }
+
+  
 
 }
