@@ -1,8 +1,9 @@
+import { map, catchError } from 'rxjs/operators';
 import { Car } from './car.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
+import { EMPTY, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,15 @@ export class CarService {
   }
 
   create(car: Car): Observable<Car> {
-    return this.http.post<Car>(this.baseUrl, car)
+    return this.http.post<Car>(this.baseUrl, car).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
+  errorHandler(e: any): Observable<any> {
+    this.showMessage('Ocorreu um erro!', true)
+    return EMPTY
   }
 
   read(): Observable<Car[]> {
